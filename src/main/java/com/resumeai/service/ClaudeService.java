@@ -1,4 +1,4 @@
-﻿package com.resumeai.service;
+package com.resumeai.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -71,7 +71,7 @@ public class ClaudeService {
         String jdContext = hasJd ? "Job Description:\n" + jobDesc + "\n" : "";
         String prompt =
             "Write a compelling " + tone.toLowerCase() + " cover letter for:\n"
-            + "Applicant: " + name + "\nBackground: " + role + " — " + experience + "\n"
+            + "Applicant: " + name + "\nBackground: " + role + " -- " + experience + "\n"
             + "Skills: " + skills + "\nApplying for: " + jobTitle + " at " + company + "\n"
             + jdContext + "\n3 paragraphs: opening hook, value proposition, CTA. No filler.";
         return generate(prompt);
